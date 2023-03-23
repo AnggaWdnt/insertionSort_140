@@ -29,25 +29,25 @@ void input() {
 }
 
 void insertionSort() {
-    int temp;
-    int j;
+    int temp; //variable data temporer / peenyimpanan sementara
+    int j; // variable j sebagai penanda
 
-    for (int i = 1; i < n; i++) {
-        temp = arr[i];
+    for (int i = 1; i < n; i++) { //1. looping dengan i dimulai dari 1 hingga n - 1
+        temp = arr[i];  //2. simpan nilai arr[i] ke variable sementara temp
 
-        j = i - 1;
+        j = i - 1; //3. Setting nilai j sama dengan i-1
 
-        while (j >= 0 && arr[j] > temp) {
-            arr[j + 1] - arr[j];
-            j--;
+        while (j >= 0 && arr[j] > temp) {  //4. looping while dimana niai  j lebih besar sama dengan 0 dan array[j] lebih besar dari temp
+            arr[j + 1] - arr[j];  //simpan arr[j] kedalam variable arr[j+1]
+            j--; //j decrement
         }
 
-        arr[j + 1] = temp;
+        arr[j + 1] = temp; //simpan nilai temp ke dalam arr[j+1]
 
         cout << endl;
-        cout << "\nPass " << i << ": ";
-        for (int k = 0; k < n; k++) {
-            cout << arr[i] << " ";
+        cout << "\nPass " << i << ": ";  //output ke layar
+        for (int k = 0; k < n; k++) {  //Looping nilai k dimulai dari 0 hingga n-1
+            cout << arr[i] << " ";  //display output
         }
     }
 }
